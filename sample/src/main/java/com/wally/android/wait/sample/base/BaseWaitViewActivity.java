@@ -47,7 +47,7 @@ public abstract class BaseWaitViewActivity extends AppCompatActivity {
 
             @Override
             public void onHideWaitDialog() {
-                Log.d(TAG, "onCreateDialog ::: 等待对话框消失了");
+                Log.d(TAG, "onCreateDialog ::: 等待对话框隐藏了");
             }
 
             @Override
@@ -55,12 +55,6 @@ public abstract class BaseWaitViewActivity extends AppCompatActivity {
                 Log.d(TAG, "onCreateDialog ::: 等待对话框销毁了");
             }
         });
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
     }
 
     /**
@@ -71,10 +65,14 @@ public abstract class BaseWaitViewActivity extends AppCompatActivity {
     }
 
     public void showWaitDialog() {
-        mWaitDialogController.getWaitIml().showWaitDialog(this, R.string.wait_dialog_tip_loading, false);
+        if (mWaitDialogController != null && mWaitDialogController.getWaitIml() != null) {
+            mWaitDialogController.getWaitIml().showWaitDialog(this, R.string.wait_dialog_tip_loading, false);
+        }
     }
 
     public void hideWaitDialog() {
-        mWaitDialogController.getWaitIml().hideWaitDialog();
+        if (mWaitDialogController != null && mWaitDialogController.getWaitIml() != null) {
+            mWaitDialogController.getWaitIml().hideWaitDialog();
+        }
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.Dialog;
 
+import com.wally.android.wait.adapter.SimpleWaitDialogAdapter;
 import com.wally.android.wait.iml.ProgressWaitDialogIml;
 import com.wally.android.wait.inter.IWaitView;
 import com.wally.android.wait.inter.IWaitViewController;
@@ -29,7 +30,7 @@ public class WaitDialogController implements IWaitViewController<Dialog> {
 
     public WaitDialogController(Activity activity, Class<? extends IWaitView<Dialog>> waitImlClass) {
         this.mApplication = activity.getApplication();
-        this.mWaitIml = parseIml(waitImlClass);
+        setWaitIml(waitImlClass);
     }
 
     /**
@@ -61,7 +62,22 @@ public class WaitDialogController implements IWaitViewController<Dialog> {
 
     @Override
     public void setWaitIml(Class<? extends IWaitView<Dialog>> newWaitImlClass) {
+        //重新设置实现类之前，先移除监听
+        if (mWaitIml != null) {
+            this.mWaitIml.removeAllListener();
+        }
         this.mWaitIml = parseIml(newWaitImlClass);
+        //设置一个销毁监听回收内存
+        this.mWaitIml.addListener(new SimpleWaitDialogAdapter() {
+            @Override
+            public void onDestroyDialog() {
+                super.onDestroyDialog();
+                if (mWaitIml != null) {
+                    mWaitIml = null;
+                    mApplication = null;
+                }
+            }
+        });
     }
 
     @Override

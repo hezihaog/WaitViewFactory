@@ -27,7 +27,9 @@ public class ProgressWaitDialogSampleActivity extends BaseWaitViewActivity imple
 
     @Override
     public void onClick(View v) {
+        //展示等待对话框
         showWaitDialog();
+        //1.5秒后隐藏对话框
         new Handler(getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {

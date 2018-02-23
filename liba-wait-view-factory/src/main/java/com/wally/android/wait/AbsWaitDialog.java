@@ -116,14 +116,14 @@ public abstract class AbsWaitDialog implements IWaitView<Dialog>, IWaitHandler<D
         if (dialog != null) {
             dialog.dismiss();
             dialog = null;
-            removeAllListener();
             onDestroyDialog();
-            if (listeners != null) {
-                for (WaitViewListener<Dialog> listener : listeners) {
-                    listener.onDestroyDialog();
-                }
+        }
+        if (listeners != null) {
+            for (WaitViewListener<Dialog> listener : listeners) {
+                listener.onDestroyDialog();
             }
         }
+        removeAllListener();
     }
 
     @Override
