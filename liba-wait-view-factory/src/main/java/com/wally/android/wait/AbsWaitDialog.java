@@ -154,4 +154,19 @@ public abstract class AbsWaitDialog implements IWaitView<Dialog>, IWaitHandler<D
             listeners.clear();
         }
     }
+
+    /**
+     * 生命周期方法，如果需要做一些处理，子类可重写方法进行添加
+     */
+    @Override
+    public void onShowWaitDialog() {
+    }
+
+    @Override
+    public void onHideWaitDialog() {
+    }
+
+    @Override
+    public void onDestroyDialog() {
+    }
 }

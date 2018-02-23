@@ -26,19 +26,4 @@ public class ProgressWaitDialogIml extends AbsWaitDialog {
         }
         return dialog;
     }
-
-    @Override
-    public void onShowWaitDialog() {
-
-    }
-
-    @Override
-    public void onHideWaitDialog() {
-
-    }
-
-    @Override
-    public void onDestroyDialog() {
-
-    }
 }

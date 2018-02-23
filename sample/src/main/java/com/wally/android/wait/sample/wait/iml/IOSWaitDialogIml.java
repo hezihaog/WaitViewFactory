@@ -24,19 +24,4 @@ public class IOSWaitDialogIml extends AbsWaitDialog {
         dialog.setMessage(msg);
         return dialog;
     }
-
-    @Override
-    public void onShowWaitDialog() {
-
-    }
-
-    @Override
-    public void onHideWaitDialog() {
-
-    }
-
-    @Override
-    public void onDestroyDialog() {
-
-    }
 }
