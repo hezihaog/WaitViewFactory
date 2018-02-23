@@ -18,7 +18,6 @@ public interface WaitViewListener<T> {
      * @param waitView 等待对话框对象
      * @param activity activity实例
      * @param msg      显示的等待提示消息文字
-     * @return 等待对话框对象
      */
     void onCreateDialog(T waitView, Activity activity, CharSequence msg);
 

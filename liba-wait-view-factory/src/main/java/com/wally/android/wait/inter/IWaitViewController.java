@@ -15,7 +15,7 @@ public interface IWaitViewController<T> {
     /**
      * 解析等待对话框实现类Class
      *
-     * @param waitImlClass
+     * @param waitImlClass 要解析的对话框实现类的Class
      * @return 解析出来的对话框实现类对象
      */
     IWaitView<T> parseIml(Class<? extends IWaitView<T>> waitImlClass);
@@ -43,6 +43,7 @@ public interface IWaitViewController<T> {
 
     /**
      * 获取全局的Application对象
+     * @return 全局的application对象
      */
     Application getApplication();
 }
