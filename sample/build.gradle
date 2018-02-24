@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.wally.android.wait.sample"
+        applicationId "oms.mmc.factory.wait.sample"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1

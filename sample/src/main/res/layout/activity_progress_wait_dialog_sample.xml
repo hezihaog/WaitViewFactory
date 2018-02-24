@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#66FF0000"
-    tools:context="com.wally.android.wait.sample.activity.ProgressWaitDialogSampleActivity">
+    android:background="#66FF0000">
 
     <TextView
         android:layout_width="wrap_content"
