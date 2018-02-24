@@ -6,7 +6,7 @@ import android.view.View;
 
 import oms.mmc.factory.wait.factory.BaseWaitDialogFactory;
 import oms.mmc.factory.wait.factory.IWaitViewFactory;
-import com.wally.android.wait.sample.R;
+import oms.mmc.factory.wait.sample.R;
 import oms.mmc.factory.wait.sample.base.BaseWaitViewActivity;
 
 public class ProgressWaitDialogSampleActivity extends BaseWaitViewActivity implements View.OnClickListener {

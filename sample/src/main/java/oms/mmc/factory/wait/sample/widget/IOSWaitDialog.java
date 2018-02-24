@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.wally.android.wait.sample.R;
+import oms.mmc.factory.wait.sample.R;
 
 
 public class IOSWaitDialog extends Dialog {

@@ -5,10 +5,9 @@ import android.os.Handler;
 import android.view.View;
 
 import oms.mmc.factory.wait.factory.IWaitViewFactory;
-import oms.mmc.factory.wait.sample.wait.factory.IOSWaitDialogFactory;
-
-import com.wally.android.wait.sample.R;
+import oms.mmc.factory.wait.sample.R;
 import oms.mmc.factory.wait.sample.base.BaseWaitViewActivity;
+import oms.mmc.factory.wait.sample.wait.factory.IOSWaitDialogFactory;
 
 public class IOSWaitDialogSampleActivity extends BaseWaitViewActivity implements View.OnClickListener {
 

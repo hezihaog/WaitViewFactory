@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.wally.android.wait.sample.R;
 
 import oms.mmc.factory.wait.sample.activity.IOSWaitDialogSampleActivity;
 import oms.mmc.factory.wait.sample.activity.ProgressWaitDialogSampleActivity;

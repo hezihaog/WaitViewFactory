@@ -11,7 +11,7 @@ import oms.mmc.factory.wait.WaitDialogController;
 import oms.mmc.factory.wait.factory.BaseWaitDialogFactory;
 import oms.mmc.factory.wait.factory.IWaitViewFactory;
 import oms.mmc.factory.wait.listener.WaitViewListener;
-import com.wally.android.wait.sample.R;
+import oms.mmc.factory.wait.sample.R;
 
 /**
  * Package: com.wally.android.wait.sample
