@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.Dialog;
 
-import oms.mmc.factory.wait.adapter.SimpleWaitDialogAdapter;
+import java.lang.reflect.Constructor;
+
 import oms.mmc.factory.wait.iml.ProgressWaitDialogIml;
 import oms.mmc.factory.wait.inter.IWaitView;
 import oms.mmc.factory.wait.inter.IWaitViewController;
-
-import java.lang.reflect.Constructor;
 
 /**
  * Package: oms.mmc.android.fast.framwork.basiclib.util
@@ -67,17 +66,6 @@ public class WaitDialogController implements IWaitViewController<Dialog> {
             this.mWaitIml.removeAllListener();
         }
         this.mWaitIml = parseIml(newWaitImlClass);
-        //设置一个销毁监听回收内存
-        this.mWaitIml.addListener(new SimpleWaitDialogAdapter() {
-            @Override
-            public void onDestroyDialog() {
-                super.onDestroyDialog();
-                if (mWaitIml != null) {
-                    mWaitIml = null;
-                    mApplication = null;
-                }
-            }
-        });
     }
 
     @Override
